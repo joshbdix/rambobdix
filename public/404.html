@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOSH RAMBO BDIX Bypass™</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      (function() {
+        var base = '/rambobdix/';
+        var l = window.location;
+        var p = l.pathname;
+
+        // If path starts with the subpath, extract route
+        if (p.indexOf(base) === 0) {
+          var route = p.slice(base.length).replace(/^\/+/, '');
+          if (route && !route.includes('.')) {
+            window.location.replace(base + '#/' + route + (l.search || '') + (l.hash || ''));
+            return;
+          }
+        }
+        window.location.replace(base + '#/' + (l.hash ? l.hash.replace(/^#\/?/, '') : ''));
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        background-color: #050811;
+        color: #00e5ff;
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div style="width: 48px; height: 48px; border: 3px solid rgba(0, 229, 255, 0.2); border-top-color: #00e5ff; border-radius: 50%; margin: 0 auto 16px; animation: spin 0.8s linear infinite;"></div>
+      <p style="font-size: 14px; font-weight: 600; letter-spacing: 0.05em;">Redirecting to JOSH RAMBO BDIX Bypass™...</p>
+      <style>
+        @keyframes spin {
+          to { transform: rotate(360deg); }
+        }
+      </style>
+    </div>
+  </body>
+</html>
